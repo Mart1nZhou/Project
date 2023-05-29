@@ -31,12 +31,6 @@
 * 注意，下载的预训练权重记得要重命名，比如在train_resnet50_fpn.py中读取的是`fasterrcnn_resnet50_fpn_coco.pth`文件，
   不是`fasterrcnn_resnet50_fpn_coco-258fb6c6.pth`
  
- 
-## 数据集，本例程使用的是PASCAL VOC2012数据集
-* Pascal VOC2012 train/val数据集下载地址：http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar
-* 如果不了解数据集或者想使用自己的数据集进行训练，请参考我的bilibili：https://b23.tv/F1kSCK
-* 使用ResNet50+FPN以及迁移学习在VOC2012数据集上得到的权重: 链接:https://pan.baidu.com/s/1ifilndFRtAV5RDZINSHj5w 提取码:dsz8
-
 ## 训练方法
 * 确保提前准备好数据集
 * 确保提前下载好对应预训练模型权重
@@ -53,11 +47,6 @@
 * 在使用预测脚本时，要将`train_weights`设置为你自己生成的权重路径。
 * 使用validation文件时，注意确保你的验证集或者测试集中必须包含每个类别的目标，并且使用时只需要修改`--num-classes`、`--data-path`和`--weights-path`即可，其他代码尽量不要改动
 
-## 如果对Faster RCNN原理不是很理解可参考我的bilibili
-* https://b23.tv/sXcBSP
-
-## 进一步了解该项目，以及对Faster RCNN代码的分析可参考我的bilibili
-* https://b23.tv/HvMiDy
 
 ## Faster RCNN框架图
 ![Faster R-CNN](fasterRCNN.png) 
